@@ -11,7 +11,7 @@ const contracts = new Map();
 let provider;
 
 function ready() {
-  return Boolean(process.env.SEPOLIA_RPC_URL && process.env.SEPOLIA_WRITER_PRIVATE_KEY && process.env.LOCKIN_CONTRACT_ADDRESS);
+  return Boolean(process.env.SEPOLIA_RPC_URL && process.env.SEPOLIA_WRITER_PRIVATE_KEY && process.env.SEPOLIA_DP_CONTRACT_ADDRESS);
 }
 
 async function getContract(paymentType) {
@@ -31,7 +31,7 @@ async function getContract(paymentType) {
 
   const address = paymentType === 'FINAL'
     ? process.env.SEPOLIA_FINAL_CONTRACT_ADDRESS
-    : process.env.LOCKIN_CONTRACT_ADDRESS;
+    : process.env.SEPOLIA_DP_CONTRACT_ADDRESS;
 
   if (!address) {
     throw new Error(`Alamat kontrak untuk ${paymentType} belum diatur.`);

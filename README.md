@@ -71,7 +71,7 @@ Lakukan transaksi **hanya di Midtrans sandbox**, mengikuti dokumentasi simulasi.
 ```ini
 SEPOLIA_RPC_URL=https://<rpc-sepolia-anda>
 SEPOLIA_WRITER_PRIVATE_KEY=<private-key-wallet-testnet-saja>
-LOCKIN_CONTRACT_ADDRESS=0x<alamat-kontrak-deployed>
+SEPOLIA_DP_CONTRACT_ADDRESS=0x<alamat-kontrak-deployed>
 ```
 
 **Jangan gunakan seed phrase/private key wallet utama.** Gunakan wallet pengujian terpisah dan simpan `.env` lokal saja. Wallet writer perlu Sepolia ETH untuk biaya gas. Pastikan kontrak menerima address wallet server sebagai writer.

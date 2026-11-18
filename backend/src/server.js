@@ -284,6 +284,6 @@ app.get('/payment/return', (req, res) => {
 const port = Number(process.env.PORT || 4000);
 app.listen(port, '127.0.0.1', () => {
   console.log(`LockIn sandbox backend: http://127.0.0.1:${port}`);
-  console.log('Blockchain writer:', process.env.LOCKIN_CONTRACT_ADDRESS ? 'configured' : 'belum diatur');
+  console.log('Blockchain writer:', process.env.SEPOLIA_DP_CONTRACT_ADDRESS ? 'configured' : 'belum diatur');
 });
 setInterval(() => { syncBlockchainJobs().catch(err => console.error('Worker:',err.message)); }, 15000).unref();

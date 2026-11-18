@@ -39,7 +39,7 @@ const warn = message => {
 // Konfigurasi dua smart contract.
 const contracts = {
   DP: {
-    address: process.env.LOCKIN_CONTRACT_ADDRESS,
+    address: process.env.SEPOLIA_DP_CONTRACT_ADDRESS,
     eventName: "DpPaymentRecorded"
   },
   FINAL: {
